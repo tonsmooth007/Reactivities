@@ -1,7 +1,7 @@
 import {Box, Button, Paper, TextField, Typography} from "@mui/material";
 import type {FormEvent} from "react";
 import {useActivities} from "../../../lib/hooks/useActivities.ts";
-import {useNavigate, useParams} from "react-router";
+import {Link, useNavigate, useParams} from "react-router";
 
 export default function ActivityForm() {
 
@@ -70,7 +70,13 @@ export default function ActivityForm() {
                     >
                         Submit
                     </Button>
-                    <Button color="inherit">Cancel</Button>
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/activities"
+                    >
+                        Cancel
+                    </Button>
                 </Box>
             </Box>
         </Paper>
